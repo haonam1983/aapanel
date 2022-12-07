@@ -29,7 +29,7 @@ red "đang cài bản tàu khựa"
 
 # bẻ khoá aapanel bản hiện tại
 function panelcrack(){  
-bash <(curl -Ls https://raw.githubusercontent.com/AZZ-vopp/Z_OV/main/script/Z_OVpanel.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/dominhtri2007/CrackAapanel/main/script/Z_OVpanel.sh)
 red "đã crack xong vui lòng f5 hoặc login lại aapanel"
 }
 # mở chặn speedtest
@@ -48,20 +48,20 @@ red "gỡ cài đặt hoàn tất"
 
 # anti l4
 function anti-l4(){
-bash <(curl -Ls https://raw.githubusercontent.com/AZZ-vopp/Z_OV/main/lo4.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/dominhtri2007/CrackAapanel/main/lo4.sh)
 red "anti l4 hoàn tất."
 }
 
 function blockspeed(){
-bash <(curl -Ls https://raw.githubusercontent.com/AZZ-vopp/code-/main/blockspeedtest.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/dominhtri2007/xray/main/blockspeedtest.sh)
 }
 
 function hacap(){
-wget -O "/root/LinuxPanel_EN-6.8.23.zip" "https://github.com/AZZ-vopp/code-/raw/main/LinuxPanel_EN-6.8.23.zip"
+wget -O "/root/LinuxPanel_EN-6.8.23.zip" "https://github.com/dominhtri2007/xray/raw/main/LinuxPanel_EN-6.8.23.zip"
 blue "đang tải tệp zip."
 unzip LinuxPanel_EN-6.8.23.zip
 cd /root/panel
-wget -O "/root/panel/confhacap.sh" "https://raw.githubusercontent.com/AZZ-vopp/code-/main/confhacap.sh" 
+wget -O "/root/panel/confhacap.sh" "https://raw.githubusercontent.comdominhtri2007/xray/main/confhacap.sh" 
 bash "/root/panel/confhacap.sh"
 red "hạ cấp hoàn tất."
 rm /root/LinuxPanel_EN-6.8.23.zip /root/panel/ -rf
@@ -73,8 +73,8 @@ rm /root/LinuxPanel_EN-6.8.23.zip /root/panel/ -rf
 function start_menu(){
     clear
     purple " chào mừng bạn đến với tool aapanel."
-    purple " zalo     : 0968343658"
-    purple " facebook : https://www.facebook.com/i.am.thai.ok"
+    purple " zalo     : minhtri1903"
+    purple " facebook : https://www.facebook.com/MMO.NongCong"
     yellow " ————————————————————————————————————————————————"
     green " 1. cài đặt aapanel bản gốc( cho centos)"
     green " 2. block speedtest trên vps chạy VPN"
