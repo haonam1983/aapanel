@@ -61,7 +61,7 @@ wget -O "/root/LinuxPanel_EN-6.8.23.zip" "https://github.com/dominhtri2007/xray/
 blue "đang tải tệp zip."
 unzip LinuxPanel_EN-6.8.23.zip
 cd /root/panel
-wget -O "/root/panel/confhacap.sh" "https://raw.githubusercontent.comdominhtri2007/xray/main/confhacap.sh" 
+wget -O "/root/panel/confhacap.sh" "https://raw.githubusercontent.com/dominhtri2007/xray/main/confhacap.sh" 
 bash "/root/panel/confhacap.sh"
 red "hạ cấp hoàn tất."
 rm /root/LinuxPanel_EN-6.8.23.zip /root/panel/ -rf
