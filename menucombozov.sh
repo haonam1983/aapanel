@@ -20,52 +20,17 @@ function aapanelgoc(){
 yum install -y wget && wget -O install.sh http://www.aapanel.com/script/install_6.0_en.sh && bash install.sh aapanel
 red "đã cài đặt hoàn tất mời quý zị dùng luôn cho nóng>.<"
 }
-
-# cài đặt bản aapanel bản tàu khựa
-function aapanelTQ(){  
-yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh
-red "đang cài bản tàu khựa"
-}
-
 # bẻ khoá aapanel bản hiện tại
 function panelcrack(){  
 bash <(curl -Ls https://raw.githubusercontent.com/dominhtri2007/CrackAapanel/main/script/Z_OVpanel.sh)
 red "đã crack xong vui lòng f5 hoặc login lại aapanel"
 }
-# mở chặn speedtest
-function unspeedtest(){
-iptables -F && clear && echo "   đã mở khoá cho test speed khi dùng vpn !"
-
-}
-
-
-
 # gỡ cài đặt aapanel
 function uninstall(){
 service bt stop && chkconfig --del bt && rm -f /etc/init.d/bt && rm -rf /www/server/panel
 red "gỡ cài đặt hoàn tất"
 }
 
-# anti l4
-function anti-l4(){
-bash <(curl -Ls https://raw.githubusercontent.com/dominhtri2007/CrackAapanel/main/lo4.sh)
-red "anti l4 hoàn tất."
-}
-
-function blockspeed(){
-bash <(curl -Ls https://raw.githubusercontent.com/dominhtri2007/xray/main/blockspeedtest.sh)
-}
-
-function hacap(){
-wget -O "/root/LinuxPanel_EN-6.8.23.zip" "https://github.com/dominhtri2007/xray/raw/main/LinuxPanel_EN-6.8.23.zip"
-blue "đang tải tệp zip."
-unzip LinuxPanel_EN-6.8.23.zip
-cd /root/panel
-wget -O "/root/panel/confhacap.sh" "https://raw.githubusercontent.com/dominhtri2007/xray/main/confhacap.sh" 
-bash "/root/panel/confhacap.sh"
-red "hạ cấp hoàn tất."
-rm /root/LinuxPanel_EN-6.8.23.zip /root/panel/ -rf
-}
 
 
 
@@ -77,16 +42,10 @@ function start_menu(){
     purple " facebook : https://www.facebook.com/MMO.NongCong"
     yellow " ————————————————————————————————————————————————"
     green " 1. cài đặt aapanel bản gốc( cho centos)"
-    green " 2. block speedtest trên vps chạy VPN"
+    green " 2. Crack bản aapanel hiện tại ( yêu tiên cài mới) "
     yellow " ————————————————————————————————————————————————"
-    green " 3. hạ cấp xuống bản ổn định 6.8.23( 1 số chỗ tiếng gốc)"
-    green " 4. mở khoá chặn speedtest ch vps vpn"
-    green " 5. Crack bản aapanel hiện tại ( yêu tiên cài mới) "
-    green " 6. anti lờ bốn"
-    green " 7. cài đặt aapanel bản tàu( cho centos)"
-    yellow " ————————————————————————————————————————————————"
-    green " 8. gỡ cài đặt bản aapanel hiện tại"
-    green " 9. chờ cập nhật tool mới"
+    green " 3. gỡ cài đặt bản aapanel hiện tại"
+    green " 4. chờ cập nhật tool mới"
     green " 0. thoát giao diện tool"
 
     echo
@@ -94,29 +53,15 @@ function start_menu(){
     case "$menuNumberInput" in
         1 )
            aapanelgoc
-	    ;;
+        ;;
         2 )
-           blockspeed
-        ;;
-        3 )
-           hacap
-        ;;
-        4 )
-           unspeedtest
-        ;;
-        5 )
            panelcrack
         ;;
-        6 )
-           anti-l4
         ;;
-        7 )
-           aapanelTQ
-        ;;
-        8 )
+        3 )
            uninstall
         ;;
-        9 )
+        4 )
            
         ;;
         0 )
