@@ -57,7 +57,6 @@ function start_menu(){
         2 )
            panelcrack
         ;;
-        ;;
         3 )
            uninstall
         ;;
